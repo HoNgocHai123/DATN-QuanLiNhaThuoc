@@ -4,8 +4,6 @@ const morgan = require('morgan');
 const cors = require('cors');
 const app = express();
 const connectDB = require('./db/connectDB')
-
-const connectDB = require('./db/connectDB')
 require('dotenv').config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
@@ -24,8 +22,7 @@ app.use('/api/v1/auth', AuthRouter)
 app.use('/api/v1/categories', categoryRoutes);
 app.use('/api/v1/subcategories', subCategoryRoutes);
 app.use('/api/v1/banner', bannerRoutes);
-app.use(cors());
-connectDB()
+
 
 
 
